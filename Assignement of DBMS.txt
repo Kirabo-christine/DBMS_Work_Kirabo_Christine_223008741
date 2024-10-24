@@ -1,0 +1,237 @@
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 14
+Server version: 8.3.0 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use ruhande;
+Database changed
+mysql> create table Ngoma(ID_no int(16), f_name char(20), l_name char(20), gender char(1), province char(20), district char(20), sector char(20), cell char(20), Email_address char(40), Phone_no int(10));
+Query OK, 0 rows affected, 2 warnings (0.03 sec)
+
+mysql> insert into Ngoma ('1200345678907654', 'Kirabo', 'Christine', 'F', 'Kigali', 'Kicukiro', 'Nyarugunga', 'Kibaya', 'Kamashashi', 'christinekrabo@gmail.com', '0788345612');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1200345678907654', 'Kirabo', 'Christine', 'F', 'Kigali', 'Kicukiro', 'Nyarugung' at line 1
+mysql> insert into Ngoma values('1200345678907654', 'Kirabo', 'Christine', 'F', 'Kigali', 'Kicukiro', 'Nyarugunga', 'Kibaya', 'Kamashashi', 'christinekrabo@gmail.com', '0788345612');
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> insert into Ngoma values('1200345678907654', 'Kirabo', 'Christine', 'F', 'Kigali', 'Kicukiro', 'Nyarugunga', 'Kibaya', 'christinekrabo@gmail.com', '0788345612');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> insert into Ngoma values('1198480048400196', 'Mashami', 'Protogene', 'M', 'Huye', 'Ngoma', 'Kamashashi', 'Rugende', 'protogene@gmail.com', '0782976580');
+Query OK, 1 row affected, 1 warning (0.02 sec)
+
+mysql> insert into Ngoma values('1200380266563036', 'Tuyizere', 'James', 'M', 'Nyabihu', 'Jenda', 'Ibereshi', 'Karama', 'james@gmail.com', '0788563036');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> insert into Ngoma values('1196680001188047', 'Ngoboka', 'Serago', 'M', 'Nyarugenge', 'Nyamirambo', 'Rwimiyaga', 'Igihozo', 'serago@gmail.com', '0788188047');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> insert into Ngoma values('1196870001953142', 'Mukarukundo', 'Esperance', 'F', 'Nyarugenge', 'Nyamirambo', 'Rwimiyaga', 'Igihozo', 'esper23@gmail.com', '0787001421');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> insert into Ngoma values('1197670009371050', 'Nduwayezu', 'Rose', 'F', 'Gasabo', 'Ruhunga', 'Nyamikamba', 'Ruzi', 'rose@gmail.com', '0793710506');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> insert into Ngoma values('1199435700096531', 'Nshimyumukiza', 'Vestine', 'F', 'Nyamasheke', 'Bushenge', 'Rukomo', 'Abera', 'Vest20@gmail.com', '0798765311');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> insert into Ngoma values('1198048483045532', 'Munyarukundo', 'Joseph', 'M', 'Eastern', 'Nyagatare', 'rwimiyaga', 'Abera', 'joseph@gmail.com', '0788804551');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> insert into Ngoma values('1200230987654358', 'Agatesi', 'Esther', 'F', 'Musanze', 'Mibirizi', 'Rwaza', 'Rwaza', 'agatesiesther@gmail.com', '0788709975');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> insert into Ngoma values('1198034567812340', 'Gitego', 'Sandra', 'F', 'Kigali', 'Gisozi', 'Kabuye', 'kansi', 'sandragit@gmail.com', '0788709474');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> insert into Ngoma values('1199098765432167', 'Ineza', 'Divine', 'F', 'Kigali', 'Gisozi', 'Kabuye', 'kansi', 'divine@gmail.com', '0788700885');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> select * from Ngoma;
++------------+---------------+-----------+--------+------------+------------+------------+---------+--------------------------+-----------+
+| ID_no      | f_name        | l_name    | gender | province   | district   | sector     | cell    | Email_address            | Phone_no  |
++------------+---------------+-----------+--------+------------+------------+------------+---------+--------------------------+-----------+
+| 2147483647 | Kirabo        | Christine | F      | Kigali     | Kicukiro   | Nyarugunga | Kibaya  | christinekrabo@gmail.com | 788345612 |
+| 2147483647 | Mashami       | Protogene | M      | Huye       | Ngoma      | Kamashashi | Rugende | protogene@gmail.com      | 782976580 |
+| 2147483647 | Tuyizere      | James     | M      | Nyabihu    | Jenda      | Ibereshi   | Karama  | james@gmail.com          | 788563036 |
+| 2147483647 | Ngoboka       | Serago    | M      | Nyarugenge | Nyamirambo | Rwimiyaga  | Igihozo | serago@gmail.com         | 788188047 |
+| 2147483647 | Mukarukundo   | Esperance | F      | Nyarugenge | Nyamirambo | Rwimiyaga  | Igihozo | esper23@gmail.com        | 787001421 |
+| 2147483647 | Nduwayezu     | Rose      | F      | Gasabo     | Ruhunga    | Nyamikamba | Ruzi    | rose@gmail.com           | 793710506 |
+| 2147483647 | Nshimyumukiza | Vestine   | F      | Nyamasheke | Bushenge   | Rukomo     | Abera   | Vest20@gmail.com         | 798765311 |
+| 2147483647 | Munyarukundo  | Joseph    | M      | Eastern    | Nyagatare  | rwimiyaga  | Abera   | joseph@gmail.com         | 788804551 |
+| 2147483647 | Agatesi       | Esther    | F      | Musanze    | Mibirizi   | Rwaza      | Rwaza   | agatesiesther@gmail.com  | 788709975 |
+| 2147483647 | Gitego        | Sandra    | F      | Kigali     | Gisozi     | Kabuye     | kansi   | sandragit@gmail.com      | 788709474 |
+| 2147483647 | Ineza         | Divine    | F      | Kigali     | Gisozi     | Kabuye     | kansi   | divine@gmail.com         | 788700885 |
++------------+---------------+-----------+--------+------------+------------+------------+---------+--------------------------+-----------+
+11 rows in set (0.00 sec)
+
+mysql> select * from Ngoma;
++------------+---------------+-----------+--------+------------+------------+------------+---------+--------------------------+-----------+
+| ID_no      | f_name        | l_name    | gender | province   | district   | sector     | cell    | Email_address            | Phone_no  |
++------------+---------------+-----------+--------+------------+------------+------------+---------+--------------------------+-----------+
+| 2147483647 | Kirabo        | Christine | F      | Kigali     | Kicukiro   | Nyarugunga | Kibaya  | christinekrabo@gmail.com | 788345612 |
+| 2147483647 | Mashami       | Protogene | M      | Huye       | Ngoma      | Kamashashi | Rugende | protogene@gmail.com      | 782976580 |
+| 2147483647 | Tuyizere      | James     | M      | Nyabihu    | Jenda      | Ibereshi   | Karama  | james@gmail.com          | 788563036 |
+| 2147483647 | Ngoboka       | Serago    | M      | Nyarugenge | Nyamirambo | Rwimiyaga  | Igihozo | serago@gmail.com         | 788188047 |
+| 2147483647 | Mukarukundo   | Esperance | F      | Nyarugenge | Nyamirambo | Rwimiyaga  | Igihozo | esper23@gmail.com        | 787001421 |
+| 2147483647 | Nduwayezu     | Rose      | F      | Gasabo     | Ruhunga    | Nyamikamba | Ruzi    | rose@gmail.com           | 793710506 |
+| 2147483647 | Nshimyumukiza | Vestine   | F      | Nyamasheke | Bushenge   | Rukomo     | Abera   | Vest20@gmail.com         | 798765311 |
+| 2147483647 | Munyarukundo  | Joseph    | M      | Eastern    | Nyagatare  | rwimiyaga  | Abera   | joseph@gmail.com         | 788804551 |
+| 2147483647 | Agatesi       | Esther    | F      | Musanze    | Mibirizi   | Rwaza      | Rwaza   | agatesiesther@gmail.com  | 788709975 |
+| 2147483647 | Gitego        | Sandra    | F      | Kigali     | Gisozi     | Kabuye     | kansi   | sandragit@gmail.com      | 788709474 |
+| 2147483647 | Ineza         | Divine    | F      | Kigali     | Gisozi     | Kabuye     | kansi   | divine@gmail.com         | 788700885 |
++------------+---------------+-----------+--------+------------+------------+------------+---------+--------------------------+-----------+
+11 rows in set (0.00 sec)
+
+mysql> Alter table Ngoma status char(20);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status char(20)' at line 1
+mysql> alter table Ngoma status char(20);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status char(20)' at line 1
+mysql> alter table Ngoma add status char(20);
+Query OK, 11 rows affected (0.05 sec)
+Records: 11  Duplicates: 0  Warnings: 0
+
+mysql> select * from Ngoma;
++------------+---------------+-----------+--------+------------+------------+------------+---------+--------------------------+-----------+--------+
+| ID_no      | f_name        | l_name    | gender | province   | district   | sector     | cell    | Email_address            | Phone_no  | status |
++------------+---------------+-----------+--------+------------+------------+------------+---------+--------------------------+-----------+--------+
+| 2147483647 | Kirabo        | Christine | F      | Kigali     | Kicukiro   | Nyarugunga | Kibaya  | christinekrabo@gmail.com | 788345612 | NULL   |
+| 2147483647 | Mashami       | Protogene | M      | Huye       | Ngoma      | Kamashashi | Rugende | protogene@gmail.com      | 782976580 | NULL   |
+| 2147483647 | Tuyizere      | James     | M      | Nyabihu    | Jenda      | Ibereshi   | Karama  | james@gmail.com          | 788563036 | NULL   |
+| 2147483647 | Ngoboka       | Serago    | M      | Nyarugenge | Nyamirambo | Rwimiyaga  | Igihozo | serago@gmail.com         | 788188047 | NULL   |
+| 2147483647 | Mukarukundo   | Esperance | F      | Nyarugenge | Nyamirambo | Rwimiyaga  | Igihozo | esper23@gmail.com        | 787001421 | NULL   |
+| 2147483647 | Nduwayezu     | Rose      | F      | Gasabo     | Ruhunga    | Nyamikamba | Ruzi    | rose@gmail.com           | 793710506 | NULL   |
+| 2147483647 | Nshimyumukiza | Vestine   | F      | Nyamasheke | Bushenge   | Rukomo     | Abera   | Vest20@gmail.com         | 798765311 | NULL   |
+| 2147483647 | Munyarukundo  | Joseph    | M      | Eastern    | Nyagatare  | rwimiyaga  | Abera   | joseph@gmail.com         | 788804551 | NULL   |
+| 2147483647 | Agatesi       | Esther    | F      | Musanze    | Mibirizi   | Rwaza      | Rwaza   | agatesiesther@gmail.com  | 788709975 | NULL   |
+| 2147483647 | Gitego        | Sandra    | F      | Kigali     | Gisozi     | Kabuye     | kansi   | sandragit@gmail.com      | 788709474 | NULL   |
+| 2147483647 | Ineza         | Divine    | F      | Kigali     | Gisozi     | Kabuye     | kansi   | divine@gmail.com         | 788700885 | NULL   |
++------------+---------------+-----------+--------+------------+------------+------------+---------+--------------------------+-----------+--------+
+11 rows in set (0.00 sec)
+
+mysql> update Ngoma set status = 'single' where l_name = 'christine';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update Ngoma set status ='taken' where l_name = 'Esther';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update Ngoma set status = 'Married' where l_name = 'Sandra';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update Ngoma set status = 'Married' where l_name = 'Divine';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update Ngoma set status = 'Married' where l_name = 'Joseph';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from Ngoma;
++------------+---------------+-----------+--------+------------+------------+------------+---------+--------------------------+-----------+---------+
+| ID_no      | f_name        | l_name    | gender | province   | district   | sector     | cell    | Email_address            | Phone_no  | status  |
++------------+---------------+-----------+--------+------------+------------+------------+---------+--------------------------+-----------+---------+
+| 2147483647 | Kirabo        | Christine | F      | Kigali     | Kicukiro   | Nyarugunga | Kibaya  | christinekrabo@gmail.com | 788345612 | single  |
+| 2147483647 | Mashami       | Protogene | M      | Huye       | Ngoma      | Kamashashi | Rugende | protogene@gmail.com      | 782976580 | NULL    |
+| 2147483647 | Tuyizere      | James     | M      | Nyabihu    | Jenda      | Ibereshi   | Karama  | james@gmail.com          | 788563036 | NULL    |
+| 2147483647 | Ngoboka       | Serago    | M      | Nyarugenge | Nyamirambo | Rwimiyaga  | Igihozo | serago@gmail.com         | 788188047 | NULL    |
+| 2147483647 | Mukarukundo   | Esperance | F      | Nyarugenge | Nyamirambo | Rwimiyaga  | Igihozo | esper23@gmail.com        | 787001421 | NULL    |
+| 2147483647 | Nduwayezu     | Rose      | F      | Gasabo     | Ruhunga    | Nyamikamba | Ruzi    | rose@gmail.com           | 793710506 | NULL    |
+| 2147483647 | Nshimyumukiza | Vestine   | F      | Nyamasheke | Bushenge   | Rukomo     | Abera   | Vest20@gmail.com         | 798765311 | NULL    |
+| 2147483647 | Munyarukundo  | Joseph    | M      | Eastern    | Nyagatare  | rwimiyaga  | Abera   | joseph@gmail.com         | 788804551 | Married |
+| 2147483647 | Agatesi       | Esther    | F      | Musanze    | Mibirizi   | Rwaza      | Rwaza   | agatesiesther@gmail.com  | 788709975 | taken   |
+| 2147483647 | Gitego        | Sandra    | F      | Kigali     | Gisozi     | Kabuye     | kansi   | sandragit@gmail.com      | 788709474 | Married |
+| 2147483647 | Ineza         | Divine    | F      | Kigali     | Gisozi     | Kabuye     | kansi   | divine@gmail.com         | 788700885 | Married |
++------------+---------------+-----------+--------+------------+------------+------------+---------+--------------------------+-----------+---------+
+11 rows in set (0.00 sec)
+
+mysql> alter table Ngoma drop status;
+Query OK, 11 rows affected (0.04 sec)
+Records: 11  Duplicates: 0  Warnings: 0
+
+mysql> select * from Ngoma;
++------------+---------------+-----------+--------+------------+------------+------------+---------+--------------------------+-----------+
+| ID_no      | f_name        | l_name    | gender | province   | district   | sector     | cell    | Email_address            | Phone_no  |
++------------+---------------+-----------+--------+------------+------------+------------+---------+--------------------------+-----------+
+| 2147483647 | Kirabo        | Christine | F      | Kigali     | Kicukiro   | Nyarugunga | Kibaya  | christinekrabo@gmail.com | 788345612 |
+| 2147483647 | Mashami       | Protogene | M      | Huye       | Ngoma      | Kamashashi | Rugende | protogene@gmail.com      | 782976580 |
+| 2147483647 | Tuyizere      | James     | M      | Nyabihu    | Jenda      | Ibereshi   | Karama  | james@gmail.com          | 788563036 |
+| 2147483647 | Ngoboka       | Serago    | M      | Nyarugenge | Nyamirambo | Rwimiyaga  | Igihozo | serago@gmail.com         | 788188047 |
+| 2147483647 | Mukarukundo   | Esperance | F      | Nyarugenge | Nyamirambo | Rwimiyaga  | Igihozo | esper23@gmail.com        | 787001421 |
+| 2147483647 | Nduwayezu     | Rose      | F      | Gasabo     | Ruhunga    | Nyamikamba | Ruzi    | rose@gmail.com           | 793710506 |
+| 2147483647 | Nshimyumukiza | Vestine   | F      | Nyamasheke | Bushenge   | Rukomo     | Abera   | Vest20@gmail.com         | 798765311 |
+| 2147483647 | Munyarukundo  | Joseph    | M      | Eastern    | Nyagatare  | rwimiyaga  | Abera   | joseph@gmail.com         | 788804551 |
+| 2147483647 | Agatesi       | Esther    | F      | Musanze    | Mibirizi   | Rwaza      | Rwaza   | agatesiesther@gmail.com  | 788709975 |
+| 2147483647 | Gitego        | Sandra    | F      | Kigali     | Gisozi     | Kabuye     | kansi   | sandragit@gmail.com      | 788709474 |
+| 2147483647 | Ineza         | Divine    | F      | Kigali     | Gisozi     | Kabuye     | kansi   | divine@gmail.com         | 788700885 |
++------------+---------------+-----------+--------+------------+------------+------------+---------+--------------------------+-----------+
+11 rows in set (0.00 sec)
+
+mysql> select f_name, l_name, Phone_no;
+ERROR 1054 (42S22): Unknown column 'f_name' in 'field list'
+mysql> select f_name, l_name, Phone_no from Ngoma;
++---------------+-----------+-----------+
+| f_name        | l_name    | Phone_no  |
++---------------+-----------+-----------+
+| Kirabo        | Christine | 788345612 |
+| Mashami       | Protogene | 782976580 |
+| Tuyizere      | James     | 788563036 |
+| Ngoboka       | Serago    | 788188047 |
+| Mukarukundo   | Esperance | 787001421 |
+| Nduwayezu     | Rose      | 793710506 |
+| Nshimyumukiza | Vestine   | 798765311 |
+| Munyarukundo  | Joseph    | 788804551 |
+| Agatesi       | Esther    | 788709975 |
+| Gitego        | Sandra    | 788709474 |
+| Ineza         | Divine    | 788700885 |
++---------------+-----------+-----------+
+11 rows in set (0.00 sec)
+
+mysql> select * from Ngoma where gender = 'F' AND sector = 'Kabuye';
++------------+--------+--------+--------+----------+----------+--------+-------+---------------------+-----------+
+| ID_no      | f_name | l_name | gender | province | district | sector | cell  | Email_address       | Phone_no  |
++------------+--------+--------+--------+----------+----------+--------+-------+---------------------+-----------+
+| 2147483647 | Gitego | Sandra | F      | Kigali   | Gisozi   | Kabuye | kansi | sandragit@gmail.com | 788709474 |
+| 2147483647 | Ineza  | Divine | F      | Kigali   | Gisozi   | Kabuye | kansi | divine@gmail.com    | 788700885 |
++------------+--------+--------+--------+----------+----------+--------+-------+---------------------+-----------+
+2 rows in set (0.00 sec)
+
+mysql> select * from Ngoma where gender = 'M' OR sector = 'Rwimiyaga';
++------------+--------------+-----------+--------+------------+------------+------------+---------+---------------------+-----------+
+| ID_no      | f_name       | l_name    | gender | province   | district   | sector     | cell    | Email_address       | Phone_no  |
++------------+--------------+-----------+--------+------------+------------+------------+---------+---------------------+-----------+
+| 2147483647 | Mashami      | Protogene | M      | Huye       | Ngoma      | Kamashashi | Rugende | protogene@gmail.com | 782976580 |
+| 2147483647 | Tuyizere     | James     | M      | Nyabihu    | Jenda      | Ibereshi   | Karama  | james@gmail.com     | 788563036 |
+| 2147483647 | Ngoboka      | Serago    | M      | Nyarugenge | Nyamirambo | Rwimiyaga  | Igihozo | serago@gmail.com    | 788188047 |
+| 2147483647 | Mukarukundo  | Esperance | F      | Nyarugenge | Nyamirambo | Rwimiyaga  | Igihozo | esper23@gmail.com   | 787001421 |
+| 2147483647 | Munyarukundo | Joseph    | M      | Eastern    | Nyagatare  | rwimiyaga  | Abera   | joseph@gmail.com    | 788804551 |
++------------+--------------+-----------+--------+------------+------------+------------+---------+---------------------+-----------+
+5 rows in set (0.00 sec)
+
+mysql> select * from Ngoma;
++------------+---------------+-----------+--------+------------+------------+------------+---------+--------------------------+-----------+
+| ID_no      | f_name        | l_name    | gender | province   | district   | sector     | cell    | Email_address            | Phone_no  |
++------------+---------------+-----------+--------+------------+------------+------------+---------+--------------------------+-----------+
+| 2147483647 | Kirabo        | Christine | F      | Kigali     | Kicukiro   | Nyarugunga | Kibaya  | christinekrabo@gmail.com | 788345612 |
+| 2147483647 | Mashami       | Protogene | M      | Huye       | Ngoma      | Kamashashi | Rugende | protogene@gmail.com      | 782976580 |
+| 2147483647 | Tuyizere      | James     | M      | Nyabihu    | Jenda      | Ibereshi   | Karama  | james@gmail.com          | 788563036 |
+| 2147483647 | Ngoboka       | Serago    | M      | Nyarugenge | Nyamirambo | Rwimiyaga  | Igihozo | serago@gmail.com         | 788188047 |
+| 2147483647 | Mukarukundo   | Esperance | F      | Nyarugenge | Nyamirambo | Rwimiyaga  | Igihozo | esper23@gmail.com        | 787001421 |
+| 2147483647 | Nduwayezu     | Rose      | F      | Gasabo     | Ruhunga    | Nyamikamba | Ruzi    | rose@gmail.com           | 793710506 |
+| 2147483647 | Nshimyumukiza | Vestine   | F      | Nyamasheke | Bushenge   | Rukomo     | Abera   | Vest20@gmail.com         | 798765311 |
+| 2147483647 | Munyarukundo  | Joseph    | M      | Eastern    | Nyagatare  | rwimiyaga  | Abera   | joseph@gmail.com         | 788804551 |
+| 2147483647 | Agatesi       | Esther    | F      | Musanze    | Mibirizi   | Rwaza      | Rwaza   | agatesiesther@gmail.com  | 788709975 |
+| 2147483647 | Gitego        | Sandra    | F      | Kigali     | Gisozi     | Kabuye     | kansi   | sandragit@gmail.com      | 788709474 |
+| 2147483647 | Ineza         | Divine    | F      | Kigali     | Gisozi     | Kabuye     | kansi   | divine@gmail.com         | 788700885 |
++------------+---------------+-----------+--------+------------+------------+------------+---------+--------------------------+-----------+
+11 rows in set (0.00 sec)
+
+mysql>
